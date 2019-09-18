@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Czerwik_Syed_project.jnlp">
+  <information>
+    <title>Czerwik_Syed_project</title>
+    <vendor>marth</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Czerwik_Syed_project.jar" size="9146372" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="EasyBook.EasyBook"  name="Czerwik_Syed_project" />
+  <update check="always"/>
+</jnlp>
