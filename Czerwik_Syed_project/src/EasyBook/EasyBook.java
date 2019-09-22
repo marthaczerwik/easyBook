@@ -601,6 +601,7 @@ public class EasyBook extends Application {
         firstIn.setPromptText("First name");
         firstIn.setMinWidth(200);
         firstIn.setOnKeyReleased((KeyEvent event) -> {
+            error_label.setVisible(true);
             if (isValidName(firstIn.getText())) {
                 error_label.setStyle("-fx-text-fill:green");
                 error_label.setText("Valid");
@@ -614,6 +615,7 @@ public class EasyBook extends Application {
         lastIn.setPromptText("Last Name");
         lastIn.setMinWidth(200);
         lastIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe2.setVisible(true);
             if (isValidName(lastIn.getText())) {
                 error_labe2.setStyle("-fx-text-fill:green");
                 error_labe2.setText("Valid");
@@ -627,6 +629,7 @@ public class EasyBook extends Application {
         emailIn.setPromptText("ABC@ABC.COM");
         emailIn.setMinWidth(200);
         emailIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe3.setVisible(true);
             if (isValidEmail(emailIn.getText())) {
                 error_labe3.setStyle("-fx-text-fill:green");
                 error_labe3.setText("Valid");
@@ -640,7 +643,8 @@ public class EasyBook extends Application {
         phoneIn.setPromptText("123-123-1234");
         phoneIn.setMinWidth(200);
         phoneIn.setOnKeyReleased((KeyEvent event) -> {
-            if (isValidPhone(phoneIn.getText())) {
+                error_labe4.setVisible(true);
+                if (isValidPhone(phoneIn.getText())) {
                 error_labe4.setStyle("-fx-text-fill:green");
                 error_labe4.setText("Valid");
             } else {
@@ -653,6 +657,7 @@ public class EasyBook extends Application {
         addressIn.setPromptText("1234 Street Road");
         addressIn.setMinWidth(200);
         addressIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe5.setVisible(true);
             if (isValidAddress(addressIn.getText())) {
                 error_labe5.setStyle("-fx-text-fill:green");
                 error_labe5.setText("Valid");
@@ -666,6 +671,7 @@ public class EasyBook extends Application {
         cityIn.setPromptText("City Name");
         cityIn.setMinWidth(200);
         cityIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe6.setVisible(true);
             if (isValidName(cityIn.getText())) {
                 error_labe6.setStyle("-fx-text-fill:green");
                 error_labe6.setText("Valid");
@@ -679,6 +685,7 @@ public class EasyBook extends Application {
         provinceIn.setPromptText("Province Name");
         provinceIn.setMinWidth(200);
         provinceIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe7.setVisible(true);
             if (isValidName(provinceIn.getText())) {
                 error_labe7.setStyle("-fx-text-fill:green");
                 error_labe7.setText("Valid");
@@ -692,6 +699,7 @@ public class EasyBook extends Application {
         countryIn.setPromptText("Country Name");
         countryIn.setMinWidth(200);
         countryIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe8.setVisible(true);
             if (isValidName(countryIn.getText())) {
                 error_labe8.setStyle("-fx-text-fill:green");
                 error_labe8.setText("Valid");
@@ -705,6 +713,7 @@ public class EasyBook extends Application {
         zipIn.setPromptText("X4X 5T5");
         zipIn.setMinWidth(200);
         zipIn.setOnKeyReleased((KeyEvent event) -> {
+            error_labe9.setVisible(true);
             if (isValidPostal(zipIn.getText())) {
                 error_labe9.setStyle("-fx-text-fill:green");
                 error_labe9.setText("Valid");
@@ -718,6 +727,7 @@ public class EasyBook extends Application {
         cardHolderFirst.setPromptText("Card First Name");
         cardHolderFirst.setMinWidth(200);
         cardHolderFirst.setOnKeyReleased((KeyEvent event) -> {
+            error_labe10.setVisible(true);
             if (isValidName(cardHolderFirst.getText())) {
                 error_labe10.setStyle("-fx-text-fill:green");
                 error_labe10.setText("Valid");
@@ -731,6 +741,7 @@ public class EasyBook extends Application {
         cardHolderLast.setPromptText("Card Last Name");
         cardHolderLast.setMinWidth(200);
         cardHolderLast.setOnKeyReleased((KeyEvent event) -> {
+            error_labe11.setVisible(true);
             if (isValidName(cardHolderLast.getText())) {
                 error_labe11.setStyle("-fx-text-fill:green");
                 error_labe11.setText("Valid");
@@ -744,6 +755,7 @@ public class EasyBook extends Application {
         cardInfo.setPromptText("1234567891234");
         cardInfo.setMinWidth(200);
         cardInfo.setOnKeyReleased((KeyEvent event) -> {
+            error_labe12.setVisible(true);
             if (isValidCardNum(cardInfo.getText())) {
                 error_labe12.setStyle("-fx-text-fill:green");
                 error_labe12.setText("Valid");
@@ -757,51 +769,63 @@ public class EasyBook extends Application {
         rootValidation.add(name, 0, 0);
         rootValidation.add(firstIn, 1, 0);
         rootValidation.add(error_label, 2, 0);
+        error_label.setVisible(false);
 
         rootValidation.add(last_name_labe2, 0, 1);
         rootValidation.add(lastIn, 1, 1);
         rootValidation.add(error_labe2, 2, 1);
+        error_labe2.setVisible(false);
 
         rootValidation.add(emailAddress, 0, 2);
         rootValidation.add(emailIn, 1, 2);
         rootValidation.add(error_labe3, 2, 2);
-
+        error_labe3.setVisible(false);
+        
         rootValidation.add(phoneNum, 0, 3);
         rootValidation.add(phoneIn, 1, 3);
         rootValidation.add(error_labe4, 2, 3);
-
+        error_labe4.setVisible(false);
+        
         rootValidation.add(address, 0, 4);
         rootValidation.add(addressIn, 1, 4);
         rootValidation.add(error_labe5, 2, 4);
-
+        error_labe5.setVisible(false);
+        
         rootValidation.add(city, 0, 5);
         rootValidation.add(cityIn, 1, 5);
         rootValidation.add(error_labe6, 2, 5);
-
+        error_labe6.setVisible(false);
+        
         rootValidation.add(province, 0, 6);
         rootValidation.add(provinceIn, 1, 6);
         rootValidation.add(error_labe7, 2, 6);
-
+        error_labe7.setVisible(false);
+        
         rootValidation.add(country, 0, 7);
         rootValidation.add(countryIn, 1, 7);
         rootValidation.add(error_labe8, 2, 7);
-
+        error_labe8.setVisible(false);
+        
         rootValidation.add(zipCode, 0, 8);
         rootValidation.add(zipIn, 1, 8);
         rootValidation.add(error_labe9, 2, 8);
-
+        error_labe9.setVisible(false);
+        
         rootValidation.add(cardHolder, 0, 9);
         rootValidation.add(cardHolderFirst, 1, 9);
         rootValidation.add(error_labe10, 2, 9);
-
+        error_labe10.setVisible(false);
+        
         rootValidation.add(cardHolder2, 0, 10);
         rootValidation.add(cardHolderLast, 1, 10);
         rootValidation.add(error_labe11, 2, 10);
-
+        error_labe11.setVisible(false);
+        
         rootValidation.add(cardNum, 0, 11);
         rootValidation.add(cardInfo, 1, 11);
         rootValidation.add(error_labe12, 2, 11);
-
+        error_labe12.setVisible(false);
+        
         rootValidation.setAlignment(Pos.CENTER);
 
         //creating the buttons of confirmation on the page
