@@ -1321,12 +1321,12 @@ public class EasyBook extends Application {
     }
 
     public boolean isValidPostal(String s) {
-        String regex = "^(?!.*[DFIOQU])[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9]$";
+        String regex = "^(?!.*[DFIOQU])[A-Za-z][0-9][A-Z] ?[0-9][A-Za-z][0-9]$";
         return s.matches(regex);//returns true if input and regex matches otherwise false;
     }
 
     public boolean isValidCardNum(String s) {
-        String regex = "\\d{13}";
+        String regex = "^\\d{13,16}$";
         return s.matches(regex);//returns true if input and regex matches otherwise false;
     }
 
