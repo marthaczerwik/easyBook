@@ -657,7 +657,7 @@ public class EasyBook extends Application {
                 error_labe5.setStyle("-fx-text-fill:green");
                 error_labe5.setText("Valid");
             } else {
-                error_labe5.setText("Invalid Last Name");
+                error_labe5.setText("Invalid Address");
                 error_labe5.setStyle("-fx-text-fill:red");
             }
         });
