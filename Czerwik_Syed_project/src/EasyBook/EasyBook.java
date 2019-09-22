@@ -653,7 +653,7 @@ public class EasyBook extends Application {
         addressIn.setPromptText("Street Name");
         addressIn.setMinWidth(200);
         addressIn.setOnKeyReleased((KeyEvent event) -> {
-            if (isValidName(addressIn.getText())) {
+            if (isValidAddress(addressIn.getText())) {
                 error_labe5.setStyle("-fx-text-fill:green");
                 error_labe5.setText("Valid");
             } else {
@@ -1328,6 +1328,11 @@ public class EasyBook extends Application {
     public boolean isValidCardNum(String s) {
         String regex = "^\\d{13,16}$";
         return s.matches(regex);//returns true if input and regex matches otherwise false;
+    }
+    
+    public boolean isValidAddress (String s) {
+        String regex = "^\\d+\\s[A-z]+\\s[A-z]+$";
+        return s.matches(regex); //returns true if input and regex matches otherwise false;
     }
 
 }
