@@ -650,7 +650,7 @@ public class EasyBook extends Application {
         });
 
         addressIn = new TextField();
-        addressIn.setPromptText("Street Name");
+        addressIn.setPromptText("1234 Street Road");
         addressIn.setMinWidth(200);
         addressIn.setOnKeyReleased((KeyEvent event) -> {
             if (isValidAddress(addressIn.getText())) {
