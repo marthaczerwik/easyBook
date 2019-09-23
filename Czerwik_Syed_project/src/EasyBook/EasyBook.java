@@ -1172,12 +1172,15 @@ public class EasyBook extends Application {
             primaryStage.setScene(scene4);
             displayActivities(listview);
         } else {
-            Alert roomError = new Alert(AlertType.ERROR);
-            roomError.setTitle("Error");
-            roomError.setHeaderText("Not enough beds for guests!");
-            roomError.setContentText("Please select enough beds for " + (numAdults + numChildren) + " person(s)");
-            bedrooms.clear();
-            roomError.showAndWait();
+            Alert roomError = new Alert(AlertType.CONFIRMATION);
+            roomError.setTitle("Warning!");
+            roomError.setHeaderText("Check number of beds!");
+            roomError.setContentText("There may not be enough beds for " + (numAdults + numChildren) + " guest(s). Continue?");
+            Optional<ButtonType> result = roomError.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                primaryStage.setScene(scene4);
+                displayActivities(listview);
+            } 
         }
     }
 
