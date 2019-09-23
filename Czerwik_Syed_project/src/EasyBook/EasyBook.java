@@ -91,6 +91,9 @@ public class EasyBook extends Application {
     private Room roomChoice;
     private double cost;
 
+//form validation field (if false, won't submit form)
+    private boolean formCorrect = true;
+    
 //arraylist of activities to be passed to Trip constructor
     ArrayList<ResortActivity> activities = new ArrayList<>();
     ResortActivity[] activityArray;
@@ -608,6 +611,7 @@ public class EasyBook extends Application {
             } else {
                 error_label.setText("Invalid first Name");
                 error_label.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -622,6 +626,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe2.setText("Invalid Last Name");
                 error_labe2.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -636,6 +641,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe3.setText("Invalid Email");
                 error_labe3.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -650,6 +656,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe4.setText("Invalid Phone");
                 error_labe4.setStyle("-fx-text-fill:red");
+                    boolean formCorrect = false;
             }
         });
 
@@ -664,6 +671,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe5.setText("Invalid Address");
                 error_labe5.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -678,6 +686,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe6.setText("Invalid City");
                 error_labe6.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -692,6 +701,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe7.setText("Invalid Province");
                 error_labe7.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -706,6 +716,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe8.setText("Invalid Country");
                 error_labe8.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -720,6 +731,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe9.setText("Invalid Postal");
                 error_labe9.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -734,6 +746,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe10.setText("Invalid Card First Name");
                 error_labe10.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -748,6 +761,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe11.setText("Invalid Card Last Name");
                 error_labe11.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -762,6 +776,7 @@ public class EasyBook extends Application {
             } else {
                 error_labe12.setText("Invalid Card Number");
                 error_labe12.setStyle("-fx-text-fill:red");
+                boolean formCorrect = false;
             }
         });
 
@@ -1228,6 +1243,12 @@ public class EasyBook extends Application {
             userInfoError.setTitle("Error");
             userInfoError.setHeaderText("Incomplete Form!");
             userInfoError.setContentText("Please fill out complete form");
+            userInfoError.showAndWait();
+        } else if (!formCorrect) {
+            Alert userInfoError = new Alert(AlertType.ERROR);
+            userInfoError.setTitle("Error");
+            userInfoError.setHeaderText("Invalid fields!");
+            userInfoError.setContentText("Please correct the invalid fields");
             userInfoError.showAndWait();
         } else {
             newUser.setFirstName(firstIn.getText());
