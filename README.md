@@ -1,6 +1,6 @@
 # easyBook
 
-A vacation booking app, that allows users to select dates, a resort, which room they would like, and optional activities to add to their trip (which change based on resort). The user enters their personal information, views a summary of their selections, and is given an option to edit or confirm their trip, presenting them with an option to save a "receipt".
+A vacation booking app, that allows users to select dates, a resort, which room they would like, and optional activities to add to their trip (which change based on resort). The user enters their personal information, views a summary of their selections, and is given an option to edit or confirm their trip, presenting them with an option to save a ["receipt"](Czerwik_Syed_project/build/classes/ResortBooking/Receipt.class). Resorts, rooms, and activities created in a [factory class](Czerwik_Syed_project/build/classes/ResortBooking/ResortCreator.class).
 
 I used a [Random Access File](Czerwik_Syed_project/build/classes/ResortBooking/UserLoginInfo.class) to store 2 preset accounts (username:John, password:101 and username:Jane, password:102), to show that theoretically the user would be able to log in when presented with the user information form, in order to autofill their information. This would not allow a new user to store their information once the app closes however, so a new approach will be needed. 
 [click here for main class to get started](Czerwik_Syed_project/build/classes/EasyBook/EasyBook.class)
