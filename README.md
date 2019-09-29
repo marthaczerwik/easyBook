@@ -8,6 +8,7 @@ I used a [Random Access File](Czerwik_Syed_project/build/classes/ResortBooking/U
 
 
 Contributions (javafx, user information form, calendar): Shaheer Syed
+
 Maintenance: Martha Czerwik
 
 While the project was submitted for grading, there are still a few bugs to fix, as well as overall code updating to be done. The following are some general updates I have done or am working on:
